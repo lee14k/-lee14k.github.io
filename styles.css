@@ -1,23 +1,16 @@
 body {
-    display:grid;
-    border:solid yellow;
+    display:flex;
     grid-template-rows:75px auto;
     grid-template-columns: 350px auto;
     background-color: #dcabbb;
 
 }
 
-img {
-    max-width: 100%;
-    max-height:100%;
-    display: block;
-}
 
 ul {
     list-style: none;
     display: grid;
     justify-content: center;
-    border: solid blue;
 }
 
 li {
@@ -27,32 +20,37 @@ li {
 .sidebar {
 grid-column: 1;
 grid-row:1 / span 2;
-border:solid purple;
 }
 
 .maintiles {
-    display:grid;
-  grid-template-columns:repeat(3, 1fr);
-  grid-template-rows:3fr 3fr;
+  /*grid-template-columns:repeat(3, 1fr);
+  grid-template-rows:repeat(3, 1fr);
   grid-row:2;
-  border:solid red;
+  border:solid red; */
   
-   
+  line-height:0;
+  -webkit-column-count:5; /* split it into 5 columns */
+  -webkit-column-gap:5px; /* give it a 5px gap between columns */
+  -moz-column-count:5;
+  -moz-column-gap:5px;
+  column-count:5;
+  column-gap:5px;
 }
+.maintiles img {
+    width: 100% !important;
+    height: auto !important;
+    margin-bottom:5px; /* to match column gap */
+    padding:5px;
+    border:solid white;
+ }
 
-.tile {
-    border:solid teal;
-  height:300px;
-  width:400px;
- 
-    
-}
+
+
 
 #logo {
     width:250px;
     height:250px;
-    justify-content: center;
-    padding-right:100px;
+
 }
 
 .barlist {
@@ -61,4 +59,43 @@ border:solid purple;
     font-family: 'Lato';
     font-size:2rem;
 }
+
+@media (max-width: 1200px) {
+    .maintiles {
+     -moz-column-count:    4;
+     -webkit-column-count: 4;
+     column-count:         4;
+    }
+ }
+
+ @media (max-width: 1000px) {
+    .maintiles {
+     -moz-column-count:    3;
+     -webkit-column-count: 3;
+     column-count:         3;
+    }
+ }
+
+ @media (max-width: 800px) {
+    .maintiles {
+     -moz-column-count:    2;
+     -webkit-column-count: 2;
+     column-count:         2;
+    }
+ }
+
+ @media (max-width: 400px) {
+    .maintiles {
+     -moz-column-count:    1;
+     -webkit-column-count: 1;
+     column-count:         1;
+    }
+ }
+
+
+
+ a { 
+    color: inherit;
+    text-decoration: none;
+ } 
 
