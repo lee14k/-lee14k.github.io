@@ -10,7 +10,7 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="contact.css">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     </head>
@@ -24,9 +24,36 @@
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-
-       
         </div>
+
+
+       <div id="contact">
+        <h3>Drop a Line!</h3>
+        <div class="fcf-form-group">
+            <label for="Name" class="fcf-label">Your name</label>
+            <div class="fcf-input-group">
+                <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+            </div>
+        </div>
+        <div class="fcf-form-group">
+            <label for="Email" class="fcf-label">Your email address</label>
+            <div class="fcf-input-group">
+                <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+            </div>
+        </div>
+
+        <div class="fcf-form-group">
+            <label for="Message" class="fcf-label">Your message</label>
+            <div class="fcf-input-group">
+                <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+            </div>
+        </div>
+        <div class="fcf-form-group">
+            <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send Message</button>
+        </div>
+
+       </div>
+   
 
         <script src="" async defer></script>
     </body>
